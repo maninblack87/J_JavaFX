@@ -1,15 +1,12 @@
 package jeon_javafx;
 
-import javafx.fxml.FXML;
 import java.io.IOException;
+import javafx.fxml.FXML;
 
-public class SecondaryController{
+public class SecondaryController {
+
     @FXML
-    private void switchToPrimary() throws IOException{
-        App.changeRoot("primary");
-    }
-    @FXML
-    private void switchToTertiary() throws IOException{
-        App.changeRoot("tertiary");
+    private void switchToPrimary() throws IOException {
+        App.setRoot("primary");
     }
 }
