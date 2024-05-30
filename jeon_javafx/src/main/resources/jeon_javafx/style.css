@@ -5,3 +5,11 @@
     -fx-background-color: rgb(255, 210, 100);
     -fx-alignment: center;
 }
+
+.draggableLabel{
+    -fx-min-width: 200px;
+    -fx-min-height: 100px;
+    -fx-font-size: 24px;
+    -fx-background-color: rgb(255, 210, 100);
+    -fx-alignment: center;
+}
