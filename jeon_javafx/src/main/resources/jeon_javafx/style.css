@@ -6,7 +6,7 @@
     -fx-alignment: center;
 }
 
-.draggableLabel{
+.dragDropBox{
     -fx-min-width: 200px;
     -fx-min-height: 100px;
     -fx-font-size: 24px;
