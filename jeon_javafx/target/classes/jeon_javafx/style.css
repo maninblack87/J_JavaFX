@@ -1,3 +1,5 @@
+/* secondary 페이지 */
+
 .testLabel{
     -fx-min-width: 200px;
     -fx-min-height: 100px;
@@ -11,5 +13,26 @@
     -fx-min-height: 100px;
     -fx-font-size: 24px;
     -fx-background-color: rgb(255, 210, 100);
+    -fx-alignment: center;
+}
+
+
+/* carManagement 페이지 */
+.headerLabel{
+    -fx-min-width: 100px;
+    -fx-min-height: 20px;
+    -fx-border-color: black;
+    -fx-border-width: 1px;
+    -fx-border-style: solid;
+    -fx-alignment: center;
+
+    -fx-background-color: yellow;
+}
+.tableLabel{
+    -fx-min-width: 100px;
+    -fx-min-height: 20px;
+    -fx-border-color: black;
+    -fx-border-width: 1px;
+    -fx-border-style: solid;
     -fx-alignment: center;
 }
