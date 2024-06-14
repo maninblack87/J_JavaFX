@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Button?>
+
+
+<VBox alignment="CENTER" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="jeon_javafx.CalculatorController">
+
+    <HBox alignment="CENTER">
+        <Label fx:id="num1" prefWidth="100"/>
+        <Label fx:id="num2" prefWidth="100"/>
+    </HBox>
+
+    <HBox alignment="CENTER">
+        <TextField fx:id="iptNum1" prefWidth="100"/>
+        <TextField fx:id="iptNum2" prefWidth="100"/>
+    </HBox>
+
+    <HBox alignment="CENTER">
+        <Button fx:id="switchSum" text="+" prefWidth="50" onAction="#operSum"/>
+        <Button fx:id="switchSubtract" text="-" prefWidth="50" onAction="#operSub"/>
+        <Button fx:id="switchMultiple" text="*" prefWidth="50" onAction="#operMul"/>
+        <Button fx:id="switchDivive" text="/" prefWidth="50" onAction="#operDiv"/>
+    </HBox>
+
+    <children>
+        <Label fx:id="result"/>
+    </children>
+
+    <children>
+        <Label text="계산기 페이지" />
+        <Button text="처음으로" onAction="#goPrimary" />
+    </children>
+
+</VBox>
