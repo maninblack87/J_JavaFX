@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.geometry.Insets?>
+
+<VBox alignment="CENTER" spacing="20" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jeon_javafx.SalaryManagementController">
+
+    <VBox alignment="CENTER">
+
+        <GridPane fx:id="salaryInfoHeader" alignment="CENTER">
+            <Label GridPane.rowIndex="0" GridPane.columnIndex="0" text="이름" styleClass="tableLabel"/>
+            <Label GridPane.rowIndex="0" GridPane.columnIndex="1" text="기본급여" styleClass="tableLabel"/>
+            <Label GridPane.rowIndex="0" GridPane.columnIndex="2" text="보너스" styleClass="tableLabel"/>
+            <Label GridPane.rowIndex="0" GridPane.columnIndex="3" text="총급여" styleClass="tableLabel"/>
+            <Label GridPane.rowIndex="0" GridPane.columnIndex="4" text="세금" styleClass="tableLabel"/>
+            <Label GridPane.rowIndex="0" GridPane.columnIndex="5" text="실수령급여" styleClass="tableLabel"/>
+        </GridPane>
+
+        <GridPane fx:id="salaryInfoContent" alignment="CENTER"/>
+
+    </VBox>
+
+    <HBox alignment="CENTER" spacing="20">
+        <VBox alignment="CENTER">
+            <Label text="이름"/>
+            <TextField fx:id="iptName"/>
+        </VBox>
+        <VBox alignment="CENTER">
+            <Label text="기본급여"/>
+            <TextField fx:id="iptSalary"/>
+        </VBox>
+        <VBox alignment="CENTER">
+            <Label text="보너스"/>
+            <TextField fx:id="iptBonus"/>
+        </VBox>
+    </HBox>
+
+    <HBox alignment="CENTER" spacing="20">
+        <Button fx:id="addButton" text="급여계산" onAction="#addData"/>
+        <Button fx:id="initButton" text="초기화" onAction="#initInfo"/>
+    </HBox>
+   
+</VBox>

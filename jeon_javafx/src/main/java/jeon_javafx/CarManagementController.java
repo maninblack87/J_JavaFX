@@ -10,8 +10,6 @@ import javafx.fxml.Initializable;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import java.util.ArrayList;
-
 public class CarManagementController implements Initializable {
 
     @FXML
@@ -27,6 +25,8 @@ public class CarManagementController implements Initializable {
 
         // 자동차 관시 시스템 생성
         CarManagementSystem mngsys = new CarManagementSystem();
+        mngsys.cars.add(c1);
+        mngsys.cars.add(c2);
 
         // 라벨 생성 및 VBox에 추가
         for (Car car : mngsys.cars){

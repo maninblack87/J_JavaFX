@@ -13,6 +13,4 @@ public class CarManagementSystem {
         cars = new ArrayList<>();
     }
 
-
-
 }
