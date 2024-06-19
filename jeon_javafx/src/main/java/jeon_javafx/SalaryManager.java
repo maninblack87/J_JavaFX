@@ -16,7 +16,7 @@ public class SalaryManager {
     }
 
     public void removeEmployee(){
-
+        
     }
 
 }
