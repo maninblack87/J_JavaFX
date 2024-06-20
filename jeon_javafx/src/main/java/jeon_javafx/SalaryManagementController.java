@@ -9,6 +9,10 @@ import javafx.fxml.Initializable;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import java.util.ArrayList;
+
+import java.io.IOException;
+
 public class SalaryManagementController implements Initializable {
 
     private SalaryManager manager = new SalaryManager();
@@ -30,10 +34,12 @@ public class SalaryManagementController implements Initializable {
         
     }
 
+    // 매니지먼트 시스템(manager객체)의 직원 리스트(employees배열) 전체 조회
     public void displayInfo(){
+        salaryInfoContent.getChildren().clear();
 
         int i = 0;
-        for (Employee employee : manager.employees) {
+        for (Employee employee : manager.getEmployees()) {
             Label name = new Label(employee.getName());
             GridPane.setConstraints(name, 0, i);
             Label salary = new Label(Double.toString(employee.getSalary()));
@@ -61,19 +67,37 @@ public class SalaryManagementController implements Initializable {
 
     }
 
+    // 버튼 "급여계산" 클릭 이벤트 처리
     public void addData(){
 
-        manager.addEmployee(iptName.getText(), Integer.parseInt(iptSalary.getText()), Integer.parseInt(iptBonus.getText()));
+        // 입력된 값을 가지고 Employee 객체 만들기
+        Employee employee = new Employee(iptName.getText(), Integer.parseInt(iptSalary.getText()), Integer.parseInt(iptBonus.getText()));
 
+        // 매니지먼트 시스템(manager객체)에 있는 직원 리스트(employees배열)에 추가
+        manager.addEmployee(employee);
+
+        // 추가 후, 전체 조회 처리
         displayInfo();
 
     }
 
-    public void initInfo(){
+    // 버튼 "항목삭제" 클릭 이벤트 처리
+    public void removeData(){
 
-        manager = new SalaryManager();
+        // 가장 오래된 직원 항목 삭제
+        manager.removeEmployee(manager.getEmployees().get(0));
 
+        // 삭제 후, 전체 조회 처리
         displayInfo();
+
+    }
+
+
+    // 첫 화면으로 이동
+    @FXML
+    private void toPrimary() throws IOException{
+
+        App.setRoot("primary");
 
     }
 

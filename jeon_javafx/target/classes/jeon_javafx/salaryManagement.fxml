@@ -42,7 +42,12 @@
 
     <HBox alignment="CENTER" spacing="20">
         <Button fx:id="addButton" text="급여계산" onAction="#addData"/>
-        <Button fx:id="initButton" text="초기화" onAction="#initInfo"/>
+        <Button fx:id="removeButton" text="항목삭제" onAction="#removeData"/>
     </HBox>
+
+    <VBox alignment="CENTER" spacing="20">
+        <Label text="첫 화면으로 이동하기"/>
+        <Button fx:id="toPrimary" text="처음으로" onAction="#toPrimary"/>
+    </VBox>
    
 </VBox>

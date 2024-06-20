@@ -4,19 +4,22 @@ import java.util.ArrayList;
 
 public class SalaryManager {
     
-    public ArrayList<Employee> employees;
+    private ArrayList<Employee> employees;
 
     public SalaryManager(){
         employees = new ArrayList<>();
     }
 
-    public void addEmployee(String name, int salary, int bonus){
-        Employee employee = new Employee(name, salary, bonus);
+    public ArrayList<Employee> getEmployees(){
+        return employees;
+    }
+
+    public void addEmployee(Employee employee){
         employees.add(employee);
     }
 
-    public void removeEmployee(){
-        
+    public void removeEmployee(Employee employee){
+        employees.remove(employee);
     }
 
 }

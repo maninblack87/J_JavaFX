@@ -16,12 +16,12 @@
    </children>
 
    <children>
-      <Label text="Calculator View" />
+      <Label text="계산기 프로그램" />
       <Button fx:id="toCalculatorButton" text="Switch to Calculator View" onAction="#switchToCalculator"/>
    </children>
 
    <children>
-      <Label text="SalaryManagement View" />
+      <Label text="급여 관리 시스템" />
       <Button fx:id="toSalaryManagementButton" text="Switch to Calculator View" onAction="#switchToSalaryManagementButton"/>
    </children>
 
